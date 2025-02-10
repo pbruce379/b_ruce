@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Love Journey</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .content-section { display: none; }
+        .content-section.active { display: block; }
+        .container {
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .gallery div {
+            margin: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="initialDisplay">Happy Valentine's Day!</h1>
+        <button onclick="showSection('together')">Together</button>
+        <button onclick="showSection('memories')">Memories</button>
+        <button onclick="showSection('loveLetterSection')">Love Letter</button>
+
+        <!-- Together Section -->
+        <section id="together" class="content-section">
+            <h2>Together</h2>
+            <p>We've been together for:</p>
+            <h3 id="countDisplay"></h3>
+        </section>
+
+        <!-- Memories Section -->
+        <section id="memories" class="content-section">
+            <h2>Memories</h2>
+            <div id="memoryGallery" class="gallery"></div>
+        </section>
+
+        <!-- Love Letter Section -->
+        <section id="loveLetterSection" class="content-section">
+            <h2>Love Letter</h2>
+            <p id="loveLetter"></p>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
